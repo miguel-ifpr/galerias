@@ -1,0 +1,97 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    font-family: 'Gochi Hand', cursive;
+    font-family: 'Skranji', cursive;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+}
+
+.parent {
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 0px;
+}
+
+.parent>div {
+    border: white solid;
+    border-width: 9px 9px 32px 9px;
+}
+
+
+.div1 {
+    background-image: url(img/gato1.jpg);
+    grid-area: 3 / 2 / 8 / 6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -10px;
+    transform: rotate(-10deg);
+    box-shadow: 3px 5px 5px black; 
+}
+
+.div2 {
+    grid-area: 7 / 9 / 14 / 13;
+    background-image: url(img/gato2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    transform: rotate(20deg);
+    box-shadow: 3px 5px 5px black;
+}
+
+.div3 {
+    grid-area: 2 / 16 / 9 / 20;
+    background-image: url(img/gato3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    transform: rotate(-30deg);
+    box-shadow: 3px 5px 5px black;
+}
+
+.div4 {
+    grid-area: 11 / 2 / 18 / 6;
+    background-image: url(img/gato4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -80px 0px;
+    box-shadow: 3px 5px 5px black;
+    transform: rotate(-6deg);
+}
+
+.div5 {
+    grid-area: 12 / 14 / 16 / 18;
+    background-image: url(img/gato5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -24px;
+    box-shadow: 3px 5px 5px black;
+    transform: rotate(6deg);    
+}
+
+p {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translateY(22px);
+}
+.parent>div {
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, background-color 0.3s ease;    
+}
+
+.parent>div:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2);   
+}
+
+.parent>div:active {
+    transform: scale(1.1); 
+}
